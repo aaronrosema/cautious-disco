@@ -1,6 +1,37 @@
+
+# Dependabot configuration for GitHub Actions and project dependencies
 version: 2
 updates:
+  # Keep GitHub Actions workflows up to date
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
+  # Season-1 Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/Season-1/"
+    schedule:
+      interval: "weekly"
+  # Season-2 Go dependencies
+  - package-ecosystem: "gomod"
+    directory: "/Season-2/Level-2/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "gomod"
+    directory: "/Season-2/Level-2/solution/"
+    schedule:
+      interval: "weekly"
+  # Season-2 JavaScript dependencies
+  - package-ecosystem: "npm"
+    directory: "/Season-2/Level-3/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "npm"
+    directory: "/Season-2/Level-5/"
+    schedule:
+      interval: "weekly"
+  # Season-3 JavaScript dependencies
+  - package-ecosystem: "npm"
+    directory: "/Season-3/"
+    schedule:
+      interval: "weekly"
